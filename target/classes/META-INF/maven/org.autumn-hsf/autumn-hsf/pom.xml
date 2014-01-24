@@ -1,0 +1,103 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>org.autumn-hsf</groupId>
+    <artifactId>autumn-hsf</artifactId>
+    <version>1.0.0</version>
+    <packaging>jar</packaging>
+
+    <properties>
+        <springframework.version>3.0.5.RELEASE</springframework.version>
+        <slf4j.version>1.5.11</slf4j.version>
+        <logback.version>0.9.20</logback.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>${slf4j.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>log4j-over-slf4j</artifactId>
+            <version>${slf4j.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-core</artifactId>
+            <version>${logback.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>${logback.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.mina</groupId>
+            <artifactId>mina-core</artifactId>
+            <version>2.0.7</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>com.googlecode</groupId>
+            <artifactId>kryo</artifactId>
+            <version>1.04</version>
+        </dependency>
+
+        <dependency>
+            <groupId>net.sf.json-lib</groupId>
+            <artifactId>json-lib</artifactId>
+            <version>2.4</version>
+            <classifier>jdk15</classifier>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.6</source>
+                    <target>1.6</target>
+                    <encoding>utf-8</encoding>
+                </configuration>
+                <version>2.3.2</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <addClasspath>true</addClasspath>
+                        </manifest>
+                    </archive>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>net.ju-n.maven.plugins</groupId>
+                <artifactId>maven-checksum-plugin</artifactId>
+                <version>1.0</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>artifacts</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <xmlSummary>true</xmlSummary>
+                    <xmlSummaryFile>artifacts-checksums.xml</xmlSummaryFile>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+
+
+</project>
