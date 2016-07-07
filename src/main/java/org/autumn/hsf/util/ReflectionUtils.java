@@ -77,14 +77,14 @@ public class ReflectionUtils {
      *            参数
      * @return Object 返回类型
      */
-    public static Object invoke(Object object, Method method, Object... args) {
-        try {
-            return method.invoke(object, args);
-        }
-        catch (Exception e) {
-            throw new RuntimeException(e.getMessage(), e);
-        }
-    }
+//    public static Object invoke(Object object, Method method, Object... args) {
+//        try {
+//            return method.invoke(object, args);
+//        }
+//        catch (Exception e) {
+//            throw new RuntimeException(e.getMessage(), e);
+//        }
+//    }
 
     /**
      * @Title: getDefaultValue
