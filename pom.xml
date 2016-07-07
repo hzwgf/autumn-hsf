@@ -62,11 +62,11 @@
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <configuration>
-                    <source>1.6</source>
-                    <target>1.6</target>
+                    <source>1.7</source>
+                    <target>1.7</target>
                     <encoding>utf-8</encoding>
                 </configuration>
-                <version>2.3.2</version>
+                <version>3.3</version>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -77,22 +77,6 @@
                             <addClasspath>true</addClasspath>
                         </manifest>
                     </archive>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>net.ju-n.maven.plugins</groupId>
-                <artifactId>maven-checksum-plugin</artifactId>
-                <version>1.0</version>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>artifacts</goal>
-                        </goals>
-                    </execution>
-                </executions>
-                <configuration>
-                    <xmlSummary>true</xmlSummary>
-                    <xmlSummaryFile>artifacts-checksums.xml</xmlSummaryFile>
                 </configuration>
             </plugin>
         </plugins>
